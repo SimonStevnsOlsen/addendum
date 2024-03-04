@@ -7,6 +7,11 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.13.0"
+bevy_rapier3d = "0.25.0"
 
 [target.wasm32-unknown-unknown]
 runner = "wasm-server-runner"
+
+# Add this to your Cargo.toml
+[profile.dev.package.bevy_rapier3d]
+opt-level = 3
